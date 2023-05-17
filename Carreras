@@ -1,0 +1,104 @@
+Caso: Gestionar todos los trámites académicos de los alumnos.
+
+
+Class Alumno{
+
+    public int CIAlumno
+    public string NombreAlumno
+    public string ApellidoAlumno
+    public string DireccionAlumno
+    private string Carrera
+
+    public setCarrera(Carrera){
+        CarreraElegida = Carrera
+        return CarreraElegida
+    }
+
+    public getCarrera(){
+        return Carrera
+    }
+
+    private ObtenerHistorialCarrera(NombreAlumno)
+    public InscribirseCarrera(NombreAlumno)
+    public ModificarseCarrera(NombreAlumno, Carrera)
+    public BorrarseCarrera(NombreAlumno,Carrera)
+
+}
+
+Class Tramite{
+
+    public int CodigoTramite
+    public int TipoTramite
+    public date FechaTramite
+    public bool EstadoTramite
+    private string Alumno
+    private string Carrera
+
+ 
+    public setEstadoTramite(Fecha, TipoTramite, Carrera, Alumno){
+        EstadoTramite = True
+        return CodigoTramite
+    }
+
+    public getEstadoTramite(CodigoTramite){
+        return EstadoTramite
+    }
+
+
+}
+
+Class Carrera{
+    
+    public int CantMaterias
+    private Materias Materias
+    public string Sede
+    private Profesores Profesor
+
+
+}
+
+
+Class Materias{
+
+    public int CodigoMateria
+    public string NombreMateria
+    public string CarreradeMateria
+    private string Horas
+
+    public creaMateria(NombreMateria,NombreProfesor,CarreradeMateria){
+        //
+        return CodigoMateria
+    }
+
+    public setHoras(Horas){
+        MatNombreHoras = Horas
+        return Horas
+    }
+
+    public getHoras(NombreMateria){
+        return Horas
+    }
+
+}
+Class Profesor{
+    
+    int CIProfesor
+    string NombreProfesor
+    int MateriasDictadas
+
+    public getProfesorNombre(){
+        return NombreProfesor
+    }
+
+    public setProfesor(CIProfesor, NombreProfesor){
+        ProfNom = NombreProfesor
+        CIProf = CIProfesor
+        return ProfNom
+    }
+
+    public Historial(NombreProfesor,MateriasDictadas){
+        //
+    }
+
+}
+
