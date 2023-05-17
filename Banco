@@ -1,0 +1,177 @@
+
+Caso: Gestionar productos asociados a los clientes de un banco.
+
+Los productos que gestiona el banco son: cuentas bancarias, fondos de inversión y carteras de valores.
+Las cuentas deben tener: número de cuenta, fecha de apertura, saldo y tipo de interés y los datos de sus clientes. 
+El banco tiene dos tipos de cuentas: corrientes y cajas de ahorro.
+Las cuentas corrientes pueden tener tarjetas de crédito asociadas. Solo estas cuentas pueden tener el resto de los productos asociados. 
+Las cajas de ahorro deben tener el número de meses que estarán abiertas. 
+De los clientes se debe almacenar la siguiente información: DNI, nombre, dirección y teléfono.
+Los fondos de inversión deben tener un nombre, importe, rentabilidad y la fecha de apertura y vencimiento.
+Las carteras de valores están compuestas por los valores asociados, almacenando el nombre del valor, el número de títulos y 
+el precio de cotización.
+Las tarjetas de crédito deben almacenar el tipo (Visa, MasterCard, etc.), el número, el titular y la fecha de caducidad.
+
+
+Class SucursalBanco{
+
+    public string Localidad
+    public string Direccion
+    public int IdSucursal
+
+    public setSucursal(Direccion,Localidad){
+         Direccion = Direccion
+         Localidad = Localidad
+         return IdSucursal
+
+    public getSucursal(){
+        return Sucursal  
+}
+
+Class CuentaBanco{
+
+    public int NumeroCuenta
+    public date FechaApertura
+    string TipoCuenta
+    public float Saldo
+    public string TipoInteres
+
+    Consultar DatosCuenta(){
+    //
+    return Cuenta
+    }
+
+
+}
+
+Class FondoInversion{
+
+    public string Riesgo
+    public float Importe
+    public int IdFondo
+    public float Rentabilidad
+    public date FechaApertura
+    public date FechaVencimiento
+    privacte Cuentas Cuenta
+
+    public ConsultadeFondo(IdFondo){
+    //
+    return Fondo
+    
+    }
+
+}
+
+
+Class CarteraValores{
+
+    public IdCarteraValores
+    private Cuentas Cuenta
+    public Valores productos
+    public int CantidadProductos
+    private float Posicion
+
+    
+    public ConsultaCartera(IdCarteraValores){
+    //
+    return Cartera
+    }
+
+
+}
+
+Class TarjetaCredito{
+
+    public int Procesador
+    public string NombreTitular
+    public date Expiracion
+    private Cuentas Cuenta
+
+    public ConsultaTarjetas(Procesador){
+    // 
+    }
+}
+
+Class EmpleadoBanco{
+
+    int NroEmpleado
+    string NombreEmpleado
+    string AutorizacionEmpleado
+    public Clientes Cliente
+    public CuentaBanco CuentaBanco
+    public Fondos FondoInversion
+    public tarjetas TarjetaCredito
+    public CarteraValores CarteraValores
+
+    CrearCliente(NombreCliente, ApellidoCliente, TipoCliente, telefono){
+        return Id Cliente
+    }
+
+    ConsultaCliente(IdCliente){
+    //
+    }
+
+    AbrirCuenta(Cuenta, NombreCliente){
+    //
+    }
+    
+    AgregarProductoFondo(){
+    //
+    }
+    
+    CambiarDatosFondoInversion(){
+    //    
+    }
+    CambiarDatosFondoTarjetaCredito(){
+    //
+    }
+    
+    CambiarDatosFondoCarteraValores(){
+    //
+    }
+    
+    AsignarProductosCliente(){
+    
+    }
+
+}
+
+Class Cliente{
+
+    public int NroCliente
+    public string NombreCliente
+    public string ApellidoCliente
+    public string TipoCliente
+    public int telefono
+
+
+ConsultarDatos(){
+//
+}
+
+ModificarDatos(){
+//
+}
+
+SolicitarApertura() {
+//
+}
+
+ComprarProductos(){
+//
+}
+
+ConsultarCuenta(){
+//
+}
+
+AgregarSaldo(){
+//
+}
+
+ExtraerSaldo(){
+//
+}
+
+
+}
