@@ -12,30 +12,23 @@ elementos devueltos y el proceso finaliza.
 
 Class Envase{
 
-    public string: TipoEnvase
+    protected string: TipoEnvase
 
     public getTipoEnvase(){
         return TipoEnvase
     }
-    public setTipoEnvase(TipoEnvase){
-        EnvaseDevuelto = TipoEnvase
-        return EnvaseDevuelto
+    public setTipoEnvase(Envase){
+         TipoEnvase = Envase
     }
     
 }
 
-Class Maquina{
-    public int: CantEnvases
-    public bool: Estado
-
-    RecibirEnvase(Estado)
-    EmitirRecibo(TipoEnvase, Valor)
-}
 
 Class Recibo{
     
-    public float Valor
-    public string Tipo Envase
+    protected float Valor
+    public int CantidadEnvase
+    public float Total
 
     public getValor(){
         return Valor
@@ -45,33 +38,19 @@ Class Recibo{
         Total= TipoEnvase * Valor * CantEnvases
     }
 
-    public CrearRecibo(TipoEnvase, Valor){
-        print  ('Aqui su recibo')
+    public CrearRecibo(Total, CantidadEnvase){
+        print  ('Aqui su recibo de {Total} y {CantidadEnvase}')
     }
 
 
 }
 
 Class Cliente {
-
-    public DevolverEnvase()
+    =
     public RecibirRecibo(TipoEnvase, EnvaseCantidad)
 
 }
 
-
-Class Recibo{
-
-    private Valor
-    public EnvaseCantidad
-    public TipoEnvase
-
-
-
-    public crearRecibo(){
-        print('Aqui su recibo de {valor} por {EnvaseCantidad} de envases')
-    }
-}
 
 
 
