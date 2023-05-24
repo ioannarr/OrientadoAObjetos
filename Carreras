@@ -1,58 +1,116 @@
 Caso: Gestionar todos los trámites académicos de los alumnos.
 
 
-Class Alumno{
+Class Persona{
 
-    public int CIAlumno
-    public string NombreAlumno
-    public string ApellidoAlumno
-    public string DireccionAlumno
+    private int CIPersona
+    public string Nombre
+    public string Apellido
+    private string Direccion
+
+    public setCIPersona(CI){
+      CIPersona = CI
+    }
+
+    public getCIPersona(){
+        return CIPersona
+    }
+
+    public MostrarDatos(){
+        print("Nombre" + self.Nombre)
+        print("Apellido" + self.Apellido)
+        print("Direccion" + self.Direccion)
+        print("CI" + self.CIPersona)
+                
+    }
+
+}
+
+
+
+Class Alumno extends Persona{
+
+
     private string Carrera
+    private string Materia
 
-    public setCarrera(Carrera){
-        CarreraElegida = Carrera
-        return CarreraElegida
+    public setCarrera(CarreraInput){
+        Carrera = CarreraInput
     }
 
     public getCarrera(){
         return Carrera
     }
 
-    private ObtenerHistorialCarrera(NombreAlumno)
-    public InscribirseCarrera(NombreAlumno)
-    public ModificarseCarrera(NombreAlumno, Carrera)
-    public BorrarseCarrera(NombreAlumno,Carrera)
+    private ObtenerHistorialCarrera(NombreAlumno){
+        //
+    }
+    
+    public InscribirseCarrera(NombreAlumno,Carrera){
+        //
+    }
+    
+    public ModificarseCarrera(NombreAlumno, Carrera){
+        //
+    }
+    
+    public BorrarseCarrera(NombreAlumno,Carrera){
+        //
+    }
 
 }
+
+
+Class Profesor extends Persona{
+
+    private string MateriasDictadas
+
+    public getMaterias(){
+        return MateriasDictadas
+    }
+
+    public setMaterias(MateriasInput){
+        MateriasDictadas = MateriasInput
+        return 
+    }
+
+    public MostrarDatos( ){
+        print("Nombre" + self.Nombre)
+        print("Apellido" + self.Apellido)
+        print("Direccion" + self.Direccion)
+        print("CI" + self.CI)
+        print("Materias" + self.MateriasDictadas)
+    }
+}
+
+
+
 
 Class Tramite{
 
-    public int CodigoTramite
+    private int CodigoTramite
     public int TipoTramite
     public date FechaTramite
     public bool EstadoTramite
-    private string Alumno
-    private string Carrera
+    public string Alumno
+    public string Carrera
 
  
-    public setEstadoTramite(Fecha, TipoTramite, Carrera, Alumno){
+    public setCodigoTramite(CodigoAutogenerado){
+        CodigoTramite = CodigoAutogenerado
         EstadoTramite = True
-        return CodigoTramite
     }
 
-    public getEstadoTramite(CodigoTramite){
-        return EstadoTramite
+    public getCodigoTramite(){
+        return CodigoTramite
     }
 
 
 }
 
-Class Carrera{
+Class Carrera extends Materia{
     
-    public int CantMaterias
-    private Materias Materias
-    public string Sede
-    private Profesores Profesor
+      public string Sede
 
 
 }
@@ -63,42 +121,22 @@ Class Materias{
     public int CodigoMateria
     public string NombreMateria
     public string CarreradeMateria
-    private string Horas
+    public string ProfesorMateria
+    private string HorasMateria
 
-    public creaMateria(NombreMateria,NombreProfesor,CarreradeMateria){
-        //
-        return CodigoMateria
+    public creaMateria(){
+    //
     }
 
     public setHoras(Horas){
-        MatNombreHoras = Horas
-        return Horas
+        Horasmateria = Horas
+ 
     }
 
-    public getHoras(NombreMateria){
+    public getHoras(){
         return Horas
     }
 
 }
-Class Profesor{
-    
-    int CIProfesor
-    string NombreProfesor
-    int MateriasDictadas
 
-    public getProfesorNombre(){
-        return NombreProfesor
-    }
-
-    public setProfesor(CIProfesor, NombreProfesor){
-        ProfNom = NombreProfesor
-        CIProf = CIProfesor
-        return ProfNom
-    }
-
-    public Historial(NombreProfesor,MateriasDictadas){
-        //
-    }
-
-}
 
