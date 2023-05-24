@@ -3,53 +3,128 @@ ser abstractas. En base al ejercicio de Herencia de Figuras Geométricas, realiz
 
 
 
+
 abstract Class FiguraGeometrica{
 
-    public string color 
+    public static string Nombre
 
-    public CalcularPermitro{    
-        }
-    public CalcularArea {
-        }
+    public static float CalcularArea{
+    }
+    
+    public static float CalcularPerimetro{
+    }
 
 }
-
 
 
 public abstract Class Poligono extends FiguraGeometrica{
 
-    public int lados
-
+    public static int lados
+   
 }
 
 
 public Class Triangulo extends Poligono{
- 
+    private int baseT
+    private int alturaT
+
+    
+    public get baseT{}
+    public set baseT(baseT){}
+    
+    public float CalcularArea(baseT,alturaT){
+        //polimorfismo
+    }
+    public float CalcularPerimetro(baseT,alturaT){
+        //polimorfismo
+    }
+
 }
 
+
 public Class Cuadrilatero extends Poligono{
-    
+    private int basemenor
+    private int basemayor
+    private int altura
+
+    public get basemenor{}
+    public set basemenor{}
+    public get basemayor{}
+    public set basemayor{}
+    public get altura{}
+    public set altura{}
+
+    public float CalcularArea(basemenor, basemayor,altura){
+        //polimorfismo
+    }
+    public float CalcularPerimetro(basemenor, basemayor,altura){
+        //polimorfismo
+    }
+
+
 }
 
 
 public abstract Class Conico extends FiguraGeometrica{
 
-    public float radio
-
+    public static float pi
+    
 }
 
 public Class Circulo extends Conico{
+    private float radioCirculo
 
-}
+    public get radioCirculo{}
+    public set radioCirculo{}
 
-public Class Parabola extends Conico{
+    public float CalcularArea(radioCirculo, pi){
+        //polimorfismo
+    }
+    public float CalcularPerimetro(radio, pi){
+        //polimorfismo
+    }
 
-}
-
-public  Class Elipse extends Conico{
-
+ 
 }
 
 public Class Hiperbola extends Conico{
+    private float ejemayor
+    private float ejemenor
+
+    public get ejemayor{}
+    public set ejemayor{}
+
+    public get ejemenor{}
+    public set ejemenor{}
+
+
+
+    public float CalcularArea(ejemayor,ejemenor){
+        //polimorfismo
+    }
+    public float CalcularPerimetro(ejemayor,ejemenor){
+        //polimorfismo
+    }
+
+ 
+}
+
+public Class Elipse extends Conico{
+    private float a
+    private float b
+
+    public get a {}
+    public set a {}
+
+    public get b {}
+    public set b {}
+
+    public float CalcularArea(a,b){
+        //polimorfismo
+    }
+    public float CalcularPerimetro(a,b){
+        //polimorfismo
+    }
+
 
 }
