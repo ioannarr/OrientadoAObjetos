@@ -1,0 +1,55 @@
+Implementar un mecanismo de herencia de herencia para las figuras geométricas, identificar cuáles clases podrían
+ser abstractas. En base al ejercicio de Herencia de Figuras Geométricas, realizar el diagrama de clases UML.
+
+
+
+abstract Class FiguraGeometrica{
+
+    public string color 
+
+    public CalcularPermitro{    
+        }
+    public CalcularArea {
+        }
+
+}
+
+
+
+public abstract Class Poligono extends FiguraGeometrica{
+
+    public int lados
+
+}
+
+
+public Class Triangulo extends Poligono{
+ 
+}
+
+public Class Cuadrilatero extends Poligono{
+    
+}
+
+
+public abstract Class Conico extends FiguraGeometrica{
+
+    public float radio
+
+}
+
+public Class Circulo extends Conico{
+
+}
+
+public Class Parabola extends Conico{
+
+}
+
+public  Class Elipse extends Conico{
+
+}
+
+public Class Hiperbola extends Conico{
+
+}
