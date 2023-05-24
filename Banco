@@ -13,128 +13,104 @@ el precio de cotización.
 Las tarjetas de crédito deben almacenar el tipo (Visa, MasterCard, etc.), el número, el titular y la fecha de caducidad.
 
 
-Class SucursalBanco{
+Class SucursalBanco {
 
     public string Localidad
     public string Direccion
     public int IdSucursal
+    public Clientes Cliente
 
-    public setSucursal(Direccion,Localidad){
-         Direccion = Direccion
-         Localidad = Localidad
-         return IdSucursal
+    public setSucursal(DireccionInput,LocalidadInput){
+         Direccion = DireccionInput
+         Localidad = LocalidadInput
+    }
 
     public getSucursal(){
         return Sucursal  
+    }
+
+    CrearCliente(){
+        //
+    }
+
+    AbrirCuenta(){
+        //
+    }
+    
+    AsignarProductosCliente(){
+     //
+    }
+   
+    ConsultaProductoFinanciero(IdProducto){
+    //
+    }
+    
 }
 
 Class CuentaBanco{
 
     public int NumeroCuenta
     public date FechaApertura
-    string TipoCuenta
+    public string TipoCuenta
     public float Saldo
-    public string TipoInteres
 
-    Consultar DatosCuenta(){
-    //
-    return Cuenta
+    Consultar DatosCuenta(){ 
+        return Cuenta
     }
-
 
 }
 
 Class FondoInversion{
-
-    public string Riesgo
-    public float Importe
+    
+    public Cliente Clientes
+    public Valores Valor
+    private float RentabilidadFondo
     public int IdFondo
-    public float Rentabilidad
     public date FechaApertura
     public date FechaVencimiento
-    privacte Cuentas Cuenta
 
     public ConsultadeFondo(IdFondo){
-    //
-    return Fondo
-    
+        //
     }
+
 
 }
 
 
 Class CarteraValores{
 
-    public IdCarteraValores
-    private Cuentas Cuenta
-    public Valores productos
-    public int CantidadProductos
-    private float Posicion
-
-    
+    public Cuentas Cuenta
+    public Valores Valor
+    public IdCarteraValores  
+         
     public ConsultaCartera(IdCarteraValores){
-    //
-    return Cartera
+        //
     }
 
 
 }
+
+Class Valor{
+    public string Nombre
+    public string Emisor
+    private float Rentabilidad 
+
+}
+
 
 Class TarjetaCredito{
 
     public int Procesador
     public string NombreTitular
     public date Expiracion
-    private Cuentas Cuenta
+    private Cliente Cliente
 
-    public ConsultaTarjetas(Procesador){
-    // 
+    public ConsultaTarjetas(){
+       //
     }
 }
 
-Class EmpleadoBanco{
 
-    int NroEmpleado
-    string NombreEmpleado
-    string AutorizacionEmpleado
-    public Clientes Cliente
-    public CuentaBanco CuentaBanco
-    public Fondos FondoInversion
-    public tarjetas TarjetaCredito
-    public CarteraValores CarteraValores
-
-    CrearCliente(NombreCliente, ApellidoCliente, TipoCliente, telefono){
-        return Id Cliente
-    }
-
-    ConsultaCliente(IdCliente){
-    //
-    }
-
-    AbrirCuenta(Cuenta, NombreCliente){
-    //
-    }
-    
-    AgregarProductoFondo(){
-    //
-    }
-    
-    CambiarDatosFondoInversion(){
-    //    
-    }
-    CambiarDatosFondoTarjetaCredito(){
-    //
-    }
-    
-    CambiarDatosFondoCarteraValores(){
-    //
-    }
-    
-    AsignarProductosCliente(){
-    
-    }
-
-}
 
 Class Cliente{
 
@@ -145,33 +121,20 @@ Class Cliente{
     public int telefono
 
 
-ConsultarDatos(){
-//
-}
+    public ConsultarDatos(NroCliente){
+        //
+    }
 
-ModificarDatos(){
-//
-}
+    AgregarSaldo(Monto){
+        //
+    }
 
-SolicitarApertura() {
-//
-}
-
-ComprarProductos(){
-//
-}
-
-ConsultarCuenta(){
-//
-}
-
-AgregarSaldo(){
-//
-}
-
-ExtraerSaldo(){
-//
-}
+    ExtraerSaldo(Monto){
+        //
+    }
 
 
 }
+
+
+
