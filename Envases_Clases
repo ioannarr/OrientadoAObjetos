@@ -46,7 +46,8 @@ Class Recibo{
 }
 
 Class Cliente {
-    =
+    <TipoEnvase> tipoEnvase
+    Recibo recibo
     public RecibirRecibo(TipoEnvase, EnvaseCantidad)
 
 }
