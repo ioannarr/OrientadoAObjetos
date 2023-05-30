@@ -1,0 +1,236 @@
+
+Caso: Gestionar productos asociados a los clientes de un banco.
+
+Los productos que gestiona el banco son: cuentas bancarias, fondos de inversión y carteras de valores.
+Las cuentas deben tener: número de cuenta, fecha de apertura, saldo y tipo de interés y los datos de sus clientes. 
+El banco tiene dos tipos de cuentas: corrientes y cajas de ahorro.
+Las cuentas corrientes pueden tener tarjetas de crédito asociadas. Solo estas cuentas pueden tener el resto de los productos asociados. 
+Las cajas de ahorro deben tener el número de meses que estarán abiertas. 
+De los clientes se debe almacenar la siguiente información: DNI, nombre, dirección y teléfono.
+Los fondos de inversión deben tener un nombre, importe, rentabilidad y la fecha de apertura y vencimiento.
+Las carteras de valores están compuestas por los valores asociados, almacenando el nombre del valor, el número de títulos y 
+el precio de cotización.
+Las tarjetas de crédito deben almacenar el tipo (Visa, MasterCard, etc.), el número, el titular y la fecha de caducidad.
+
+
+
+Class Banco {
+
+    public string Nombre
+    public string DireccionFinanciera
+    public Collection<Sucursal> sucursales
+    private CarteraValores CarteraValores
+
+    public informarSucursales(){}
+
+}
+
+
+Class Sucursal {
+
+    public string Localidad    
+    public int IdSucursal
+    public int CantidadEmpleados
+    public int CantidadClientes
+    public Collection<Servicio> servicio;
+
+    public informarDatos(IdSucursal){} 
+
+}
+
+abstract Class Cuenta{
+
+    public date FechaApertura
+    public string Moneda
+    
+  
+}
+
+Class CajaAhorro extends CuentaBanco{
+      
+    private float SaldoAhorro
+
+    public void AgregarSaldo(Monto){}
+    public float ExtraerSaldo(Monto){}          
+
+    public float getSaldoAhorro(){
+            renturn SaldAhorro
+      }
+
+    public float setSaldoAhorro(SaldAhorroCliente){
+            SaldoAhorro  = SaldAhorroCliente
+      }
+      
+}
+
+
+Class CuentaCorriente extends CuentaBanco{
+      
+     private float SaldoCorriente
+
+      
+    public void AgregarSaldo(Monto){}
+    public float ExtraerSaldo(Monto){}      
+
+
+    public float get SaldoCorriente(){
+        renturn SaldoCorriente
+      }
+
+    public float set SaldoCorriente(SaldoCorriente){
+        SaldoCorriente = SaldoCorrienteCliente
+      }
+      
+}
+
+
+Class Servicio{
+
+    public int NroServicio
+    public date AperturaServicio
+    public date VencimientoServicio
+
+    public string informarServicio(NroServicio){}
+
+}
+
+Class FondoInversion extends Servicio{
+        
+    private float RentabilidadFondo
+
+     
+    public getRentabilidadFondo(){
+        renturn RentabilidadFondo
+    }
+     public setRentabilidadFondo(CalculoRentabilidad){
+         RentabilidadFondo = CalculoREntabilidad
+    }
+   
+}
+
+
+Class CarteraValores extends Servicio{
+
+    public int CantidadValores
+    private Collection<Valores> Valores
+
+    public string InformarDatos(NroServicio)
+
+    public get Valores(){
+        renturn Valores
+    }
+    public set Valores(){
+    }
+
+}
+
+// Un valor es un titulo
+abstract Class Valor{
+
+    public string NombreValor
+    public string Emisor
+    private float RentabilidadValor
+
+    public ConsultaValor(NombreValor){}
+
+    public void set RentabilidadValor(calculovalor){
+        RentabilidadValor = calculovalor
+    }
+    public float get RentabilidadValor(){
+        renturn RentabilidadValor
+    }
+
+}
+
+
+Class TarjetaCredito extends Servicio{
+
+    public int Procesador
+    public string NombreTitular
+    public date Expiracion
+
+    public string ConsultaDatosTarjetadeCredito(){}
+ 
+}
+
+
+abstract Class Cliente{
+
+    public string NombreCliente
+    public string ApellidoCliente
+    public string DireccionCliente
+    public string Telefono
+   
+   
+}
+
+
+Class ClientePersona extends Cliente{
+
+    public string NroCI
+    private Collection<CuentaBanco> CuentaBanco;
+    private Collection<TarjetaCredito> TarjetaCredito;
+    private FondoInversion FondoInversion;
+
+    public ConsultaDatos(NroCI){} //Polimorfismo
+    public ComprarServicios(NroCI, NroServicio){} //Polimorfismo
+
+
+
+}
+
+Class ClientePyme extends Cliente{
+
+    public string RazonSocial
+    private Collection<CuentaBanco> CuentaBanco;
+    private Collection<TarjetaCredito> TarjetaCredito;
+
+    public ConsultaDatos(RAzonSocial){} //Polimorfismo
+    public ComprarServicios(RazonSocial, NroServicio){} //Polimorfismo
+
+}
+
+Class ClienteCorporacion extends Cliente{
+
+    public string RUTCorporacion
+    private Collection<CuentaBanco> CuentaBanco;
+    private Collection<TarjetaCredito> TarjetaCredito;
+
+    public ConsultaDatos(RUTCorporacion){} //Polimorfismo
+    public ComprarServicios(RUTCorporacion, NroServicio){} //Polimorfismo
+
+}  
+
+
+
+Class Empleado{
+
+    publi string NroEmpleado
+    public string NombreEmpleado
+    public string ApellidoEmpleado
+    public string SucursalEmpleado
+ 
+}
+
+
+Class Agente extends Empleado{
+
+    public void ConsultaDatos(NroEmpleado)
+    private void ConsultarDatosCliente(NroEmpleado, NroCliente){}
+    private void ConsultaTarjetasCliente((NroEmpleado, NroCliente){}
+
+
+}
+
+
+
+Class Gerente extends Empleado{
+
+    public void ConsultaDatos(NroEmpleado)
+    private void ConsultarDatosServicios(NroEmpleado, NroServicio){}
+
+}
+
+
+
+
